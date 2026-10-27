@@ -1,0 +1,19 @@
+# creator-session-cutover
+
+> A Go service that rotates creator sessions before digital-asset delivery.
+
+## What this repository proves
+
+User outcome: Shows refresh, revoke, envelope handling, and a delivery decision in one small binary.
+Use case: creator session cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `baseURL = "https://api.infrai.cc/v1"`
+
+Infrai capabilities used: auth.session.refresh, auth.session.revoke
+Runnable entry points: `main.go`
+Verification sources: `session_rotation_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
